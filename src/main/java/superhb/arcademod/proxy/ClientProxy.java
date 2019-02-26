@@ -14,11 +14,6 @@ public class ClientProxy extends CommonProxy {
 		super.preInit(event);
 		
 		KeyHandler.registerKeyBinding();
-		
-		// Register Client Network Message
-		ArcadePacketHandler.INSTANCE.registerMessage(ClientCoinMessage.Handler.class, ClientCoinMessage.class, 0, Side.CLIENT);
-		ArcadePacketHandler.INSTANCE.registerMessage(ClientBuyMessage.Handler.class, ClientBuyMessage.class, 1, Side.CLIENT);
-		ArcadePacketHandler.INSTANCE.registerMessage(GetPlayerMessage.Handler.class, GetPlayerMessage.class, 5, Side.CLIENT);
 	}
 	
 	@Override
